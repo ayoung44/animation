@@ -1,0 +1,50 @@
+.loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100px;
+	height: 100px;
+}
+.loading span {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 0;
+	left: 0;
+	animation: clockwise 2s linear infinite;
+}
+.loading span:nth-child(1) {
+	background-color: pink;
+}
+.loading span:nth-child(2) {
+	background-color: palegoldenrod;
+	animation-delay: 1s;
+}
+
+/* Animation */
+@keyframes clockwise {
+	0% {
+		top: 0;
+		left: 0;
+	}
+	25% {
+		top: 0;
+		left: calc(100% - 30px);
+		background-color: dodgerblue;
+	}
+	50% {
+		top: calc(100% - 30px);
+		left: calc(100% - 30px);
+		background-color: orange;
+	}
+	75% {
+		top: calc(100% - 30px);
+		left: 0;
+		background-color: yellowgreen;
+	}
+	100% {
+		top: 0;
+		left: 0;
+	}
+}
