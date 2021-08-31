@@ -1,0 +1,53 @@
+.loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90px;
+	height: 90px;
+}
+.loading span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.9);
+	text-transform: uppercase;
+	color: black;
+	animation: fade 1.5s linear infinite;
+}
+.border {
+	width: inherit;
+	height: inherit;
+	line-height: 90px;
+	box-sizing: border-box;
+	text-align: center;
+	border: 10px solid #000;
+	border-right-color: #ddd;
+	border-left-color: #ddd;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: rotate-360 1s linear infinite;
+}
+
+/* Animation */
+@keyframes rotate-360 {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
